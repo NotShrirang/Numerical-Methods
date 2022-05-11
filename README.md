@@ -1,2 +1,2 @@
-# M3-Methods
+# Numerical methods
 Multiple methods to find root of given polynomial.
