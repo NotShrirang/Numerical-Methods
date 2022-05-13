@@ -28,6 +28,3 @@ def lambdafunction(*args: str, caller: str) -> list:
     except:
         os.remove('lambdaInternal.py')
         return "An error occured! Check your code..."
-        
-# syntax :
-# print(lambdafunction("def mul(a, b):", "\n\tz = a*b", "\n\treturn z", caller="mul(3, 6)")) # prints : 18
