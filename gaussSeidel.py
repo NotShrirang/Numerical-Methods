@@ -1,6 +1,43 @@
 class GaussSeidel:
-    def __init__(self) -> None:
-        pass
+    def __init__(self, eq_list) -> None:
+        self.equation_list = []
+        self.equation_list = eq_list
+        i = 0
+        for eq in self.equation_list:
+            sum = 0
+            for item in eq:
+                sum = sum + abs(item)
+            if( abs(eq[i]) > (sum-abs(eq[i]))):
+                print("yes")
+            i = i + 1
+        # i = 0
+        # for eq in self.equation_list:
+        #     vars()[f'list{i}'] = []
+        #     i = i + 1
+        # i = 0
+        # for eq in self.equation_list:
+        #     i = 0
+        #     while(i<(len(eq)-1)):
+        #         item = eq[i]
+        #         vars()[f'list{i}'].append(item)
+        #         i = i + 1
+        # i = 0
+        # while(i<(len(eq)-1)):
+        #     print(vars()[f'list{i}'])
+        #     i = i + 1
+        # i = 0
+        # while(i<(len(eq)-1)):
+        #     item = max(vars()[f'list{i}'])
+        #     if(item == vars()[f'list{i}'][i]):
+        #         print("Yes!")
+        #     else:
+        #         old_index = vars()[f'list{i}'].index(item)
+        #         print(i, old_index)
+        #     i = i + 1
+        # for eq in self.equation_list:
+        #     item = max(eq[1:-1])
+        #     eq.remove(item)
+        #     self.equation_list[i].insert(i, item)
     def gaussSeidel():
         pass
 
@@ -28,11 +65,13 @@ if __name__ == '__main__':
         print(f"\nEquation {i+1} : ")
         while j<=x:
             if(j == x):
-                r = input(f"Enter constant term : ")
+                r = int(input(f"Enter constant term : "))
             else:
-                r = input(f"Enter coefficient of x{j+1} : ")
+                r = int(input(f"Enter coefficient of x{j+1} : "))
             eq.append(r)
             j += 1
         equations_list[i] = eq
         i+=1
-    print(equations_list)
+    for eq_list in equations_list:
+        print(eq_list)
+    obj = GaussSeidel(equations_list)
