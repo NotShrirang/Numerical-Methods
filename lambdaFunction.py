@@ -1,3 +1,7 @@
+'''
+Library for writing lambda functions of multiple lines.
+- Method lambdafunction() - returns list or string. 
+'''
 import os
 def lambdafunction(*args: str, caller: str) -> list | str: 
     '''
@@ -8,7 +12,7 @@ def lambdafunction(*args: str, caller: str) -> list | str:
         caller (str) : Function name to be executed.
     
     Returns : 
-        Returns whatever mentioned in *args.
+        Returns whatever return type mentioned in *args.
     
     Syntax :
         lambdafunction("arg1", "arg2", ..., caller='caller function')
