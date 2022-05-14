@@ -19,6 +19,7 @@ class SecantMethod:
                     break
                 i = i - 1
         return root
+    
 if __name__ == '__main__':
     exp = input("Enter equation : ")
     obj = SecantMethod()
