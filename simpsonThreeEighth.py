@@ -1,24 +1,24 @@
 import lambdaFunction
 class SimpsonThreeEighth:
     def integrate(self, exp : str, _startIndex, _endIndex) -> float | str:
-        self.exp = exp
-        self.y = []
+        self._exp = exp
+        self._y = []
         self._startIndex = _startIndex
         self._endIndex = _endIndex
 
         h = (self._endIndex - self._startIndex)/1000000
-        self.y = self.f(exp, self._startIndex, self._endIndex, h)
+        self._y = self.f(self._exp, self._startIndex, self._endIndex, h)
         i = 1
         y3 = []
         yelse = []
-        while(i<(len(self.y)-1)):
+        while(i<(len(self._y)-1)):
             if(i%3==0):
-                y3.append(self.y[i])
+                y3.append(self._y[i])
             else:
-                yelse.append(self.y[i])
+                yelse.append(self._y[i])
             i = i + 1
         try:
-            integral = ((3*h)/8)*((self.y[0] + self.y[-1]) + 2*(sum(y3)) + 3*(sum(yelse)))
+            integral = ((3*h)/8)*((self._y[0] + self._y[-1]) + 2*(sum(y3)) + 3*(sum(yelse)))
             integral = round(integral, 8)
             return integral
         except:
