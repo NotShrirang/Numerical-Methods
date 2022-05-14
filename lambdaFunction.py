@@ -1,5 +1,5 @@
 import os
-def lambdafunction(*args: str, caller: str) -> list: 
+def lambdafunction(*args: str, caller: str) -> list | str: 
     '''
     Function to write lambda function with multiple lines. 
 
