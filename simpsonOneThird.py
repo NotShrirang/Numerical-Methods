@@ -1,6 +1,6 @@
 import lambdaFunction
 class SimpsonOneThird:
-    def integrate(self, exp : str, _startIndex, _endIndex):
+    def integrate(self, exp : str, _startIndex, _endIndex) -> float | str:
         self.exp = exp
         self.y = []
         self._startIndex = _startIndex
@@ -25,7 +25,7 @@ class SimpsonOneThird:
             return integral
         except:
             return "Math Error"
-    def f(self, exp : str, a, b, h):
+    def f(self, exp : str, a, b, h) -> list:
         return(lambdaFunction.lambdafunction("from math import *","\ndef f():", f"\n\tx = {a}", f"\n\th = {h}", "\n\tl = []\n\tl2 = []", f"\n\twhile(x<={b}):", "\n\t\tl.append(x)", "\n\t\tx = x + h", "\n\tfor x in l:", f"\n\t\ty = {exp}", "\n\t\tl2.append(y)", "\n\treturn l2", caller=f"f()"))
 
 if __name__ == '__main__':
