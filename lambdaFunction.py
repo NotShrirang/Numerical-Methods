@@ -3,7 +3,7 @@ Library for writing lambda functions of multiple lines.
 - Method lambdafunction() - returns list or string. 
 '''
 import os
-def lambdafunction(*args: str, caller: str) -> list | str: 
+def lambdafunction(*args: str, caller: str): 
     '''
     Function to write lambda function with multiple lines. 
 
