@@ -1,4 +1,3 @@
-# from StandardFunctions import f, dof
 import StandardFunctions
 class NewtonRaphson:
     '''
